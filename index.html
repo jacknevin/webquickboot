@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>KLC内部软件系统启动管理器</title>
+        <style>
+            @font-face{
+                font-family: wq;
+                src:url(font/wq.ttf);
+            }
+            body{
+                margin: 0;
+                background-color: #BEBEBE;
+                background:url(img/bg3.jpg) no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .blur{
+                /*filter: url(blur.svg#blur);*/
+                -webkit-filter: blur(20px);
+                -moz-filter: blur(20px);
+                -ms-filter: blur(20px);
+                filter:blur(20px);
+
+                /*filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);*/
+            }
+            .container{
+                /*font-family: "宋体";*/
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                align-content: space-around;
+            }
+            .maindiv{
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                padding: 0;
+                width: 660px;
+                margin-top : 10%;
+                box-shadow: 0px 2px 25px 10px #F0F0F0;
+                /*box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,0 .5em 1em rgba(0, 0, 0, 0.6);*/
+                border-radius: 10px;
+            }
+            .maintop{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                background-color: #E0E0E0;
+                height: 40px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-flow: row nowrap;
+                padding-left: 20px;
+            }
+            .maindetail{
+                display: flex;
+                justify-content: center;
+                flex-flow: row wrap;
+                /*align-items:center;*/
+                align-content: space-around;
+                border-left: #ADADAD;
+                border-right: #ADADAD;
+                border-bottom: #ADADAD;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: #FCFCFC;
+                width: 100%;
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+            .listitem{
+                display: flex;
+                justify-content: center;
+                flex-flow: row wrap;
+                border-radius: 30px;
+                /*margin-top: 10px;*/
+                margin: 5px auto;
+                width: 45%;
+                height: 50px;
+                align-items: center;
+                border: 1px solid #BEBEBE;
+                text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
+            }
+            .listitem:hover{
+                background-color: #46A3FF;
+                border-color: #46A3FF;
+                cursor: pointer;
+                color: #FFF;
+            }
+            .listitem:active{
+                background-color: #0072E3;
+                color: #ECF5FF;
+                cursor: pointer;
+            }
+        </style>
+        <script src="node_modules/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app" class="container">
+            <div class="maindiv">
+                <div class="maintop">
+                    <span>系统启动列表</span>
+                </div>
+                <div class="maindetail">
+                    <div class="listitem">
+                        <p>物品进出管理系统</p>
+                    </div>
+                    <div class="listitem">
+                        <p>监控履历追踪系统</p>
+                    </div>
+                    <div class="listitem">
+                        <p>人事资料管理系统</p>
+                    </div>
+                    <div class="listitem">
+                        <p>FFI生产管理系统</p>
+                    </div>
+                    <div class="listitem">
+                        <p>庶务仓库管理系统</p>
+                    </div>
+                    <div class="listitem">
+                        <p>智能会议电子白板</p>
+                    </div>
+                    <div class="listitem">
+                        <p>采购系统</p>
+                    </div>
+                    <div class="listitem">
+                        <p>餐饮系统</p>
+                    </div>
+                    <div class="listitem">
+                        <p>门禁系统</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data:{
+                    bigtxt: '内部软件系统启动管理器',
+                    sectxt: '用户可以直接点击下面相应的图标打开并进出系统'
+                },
+                methods:{
+
+                }
+            })
+        </script>
+    </body>
+</html>
